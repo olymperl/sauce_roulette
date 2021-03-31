@@ -1,0 +1,19 @@
+.edit-student {
+    min-height: calc(100vh - 50px - 32px);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(247, 215, 241);
+    
+    &__form {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .mat-card {
+        background-color: rgb(163, 186, 255);
+    }
+}

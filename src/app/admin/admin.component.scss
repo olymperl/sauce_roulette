@@ -1,0 +1,30 @@
+.admin {
+    padding: 24px;
+    
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    &__action {
+        text-align: right;
+    }
+
+    .mat-form-field {
+        flex-grow: 5;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__add-student-btn {
+        flex-grow: 1;
+        height: min-content;
+        align-self: center;
+    }
+
+    button {
+        margin: 8px;
+    }
+}

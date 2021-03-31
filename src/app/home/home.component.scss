@@ -1,0 +1,54 @@
+.home {
+    min-height: calc(100vh - 50px - 32px);
+    width: 100%;
+    background-image: url('/assets/home-background.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sauce {
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+    
+        > * {
+            flex: 1 0 100%;
+        }
+    }
+
+    &__button {
+        background-color: rgb(249, 78, 255);
+        font-size: 20px;
+        text-transform: uppercase;
+    } 
+
+    &__result {
+        border: 1px solid rgb(245, 205, 26);
+        margin-top: 24px;
+        padding: 8px;
+    }
+    
+    &__label {
+        text-align: center;
+        position: relative;
+        bottom: 24px;
+        background: white;
+        width: max-content;
+        margin: auto;
+        padding: 4px;
+        font-size: 16px;
+    }
+    
+    &__student {
+        text-align: center;
+        margin: 0;
+        position: relative;
+        bottom: 13px;
+        font-size: 16px;
+    }
+}

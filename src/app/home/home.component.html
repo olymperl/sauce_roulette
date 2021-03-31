@@ -1,0 +1,23 @@
+<section class="home">
+    <mat-card>
+        <h4>Sélectionnez une classe et cliquez sur le bouton pour mettre quelqu'un dans la sauce.</h4>
+        <form class="sauce__form" [formGroup]="sauceForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+                <mat-label>Classe</mat-label>
+                <mat-select formControlName="classe" name="classe" (selectionChange)="onSelectChange()">
+                    <mat-option [value]="''"></mat-option>
+                    <mat-option *ngFor="let classe of classes" [value]="classe">
+                        {{classe.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button [disabled]="classeControl.invalid" class="sauce__button" mat-raised-button>Release The Sauce 😍</button>
+        </form>
+        <div *ngIf="saucedStudent" class="sauce__result">
+            <h5 class="sauce__label">🎊 Résultat 🎊</h5>
+            <p class="sauce__student">{{saucedStudent}} est dans la sauce !</p>
+        </div>
+    </mat-card>
+
+</section>

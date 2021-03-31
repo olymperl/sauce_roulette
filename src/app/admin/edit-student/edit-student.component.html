@@ -1,0 +1,21 @@
+<section class="edit-student">
+    <mat-card *ngIf="!!studentForm"> 
+        <form [formGroup]="studentForm" class="edit-student__form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nom et Prénom</mat-label>
+                <input matInput placeholder="John Papa" formControlName="name" name="name">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Classe</mat-label>
+                <mat-select formControlName="classe" name="classe">
+                    <mat-option [value]="''"></mat-option>
+                    <mat-option *ngFor="let classe of classes" [value]="classe">
+                        {{classe}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button [disabled]="studentForm.invalid" color="primary" mat-raised-button (click)="validate()">Valider</button>
+            <button color="warn" mat-raised-button (click)="cancel()">Annuler</button>
+        </form>
+    </mat-card>
+</section>
